@@ -3,7 +3,7 @@
 # Set up environment variables
 LOCATION=westeurope
 RESOURCEGROUP=myrg-03-12
-CLUSTER=mycuster-03-12
+CLUSTER=mycluster-03-12
 
 # Create the cluster
 az aro create \
@@ -14,3 +14,8 @@ az aro create \
   --worker-subnet worker-subnet \
   --domain adriaanmolendijk.info \
   --pull-secret @pull-secret.txt
+
+# List credentials cluster
+az aro list-credentials \
+  --name $CLUSTER \
+  --resource-group $RESOURCEGROUP

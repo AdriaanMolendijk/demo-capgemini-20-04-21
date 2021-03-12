@@ -3,7 +3,7 @@
 # Set up environment variables
 LOCATION=westeurope
 RESOURCEGROUP=myrg-03-12
-CLUSTER=mycuster-03-12
+CLUSTER=mycluster-03-12
 
 # Create the resource group
 az group create --name $RESOURCEGROUP --location $LOCATION
