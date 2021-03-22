@@ -1,2 +1,2 @@
 # capgemini-demo-devops
-This repository contains code I used for the DevOps demo at Capgemini.
+This repository contains code we used for the DevOps demo at Capgemini.
