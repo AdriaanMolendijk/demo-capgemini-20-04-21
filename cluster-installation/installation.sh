@@ -2,8 +2,8 @@
 
 # Set up environment variables
 LOCATION=westeurope
-RESOURCEGROUP=myrg-03-12
-CLUSTER=mycluster-03-12
+RESOURCEGROUP=demo-0325
+CLUSTER=mycluster-demo-0325
 
 # Create the cluster
 az aro create \
