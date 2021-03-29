@@ -1,3 +1,9 @@
+# Create htpass file
+touch .htpasswd
+
+# Add password to .htpasswd file
+htpasswd -B .htpasswd <username> <password>
+
 # Create secret containing .htpasswd file
 oc create secret generic htpass-secret --from-file=htpasswd=.htpasswd -n openshift-config
 
