@@ -12,4 +12,7 @@ spec:
     kind: ""
     name: nginx
     weight: null
+  tls:
+    insecureEdgeTerminationPolicy: None
+    termination: edge
 status: {}
