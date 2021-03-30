@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  port:
+    targetPort: 80
+  to:
+    kind: ""
+    name: nginx
+    weight: null
+status: {}
