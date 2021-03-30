@@ -4,11 +4,10 @@ pipeline {
     }
     
     stages {
-        stage('Hello') {
+        stage('Build image') {
             steps {
-                echo 'Hello World'
-                sh 'pwd'
-                sh 'uname --all'
+                sh 'docker build -t docker.apps.adriaanmolendijk.info/nginx k8s/nginx'
+                sh 'docker push docker.apps.adriaanmolendijk.info/nginx'
             }
         }
     }
