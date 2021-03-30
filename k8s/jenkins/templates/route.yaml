@@ -6,8 +6,12 @@ metadata:
   name: jenkins
   namespace: cicd
 spec:
+  host: jenkins.apps.adriaanmolendijk.info
   port:
     targetPort: 8080
   to:
     kind: Service
     name: jenkins
+  tls:
+    insecureEdgeTerminationPolicy: None
+    termination: edge

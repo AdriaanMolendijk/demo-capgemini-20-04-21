@@ -1,15 +1,16 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  creationTimestamp: null
   labels:
     app: nexus
   name: nexus
 spec:
+  host: nexus.apps.adriaanmolendijk.info
   port:
     targetPort: 8081
   to:
     kind: ""
     name: nexus
-    weight: null
-status: {}
+  tls:
+    insecureEdgeTerminationPolicy: None
+    termination: edge
