@@ -21,6 +21,7 @@ pipeline {
                 sh 'oc login -u bryan -p $OC_CREDS $OC_API_ADDR --insecure-skip-tls-verify'
                 sh 'oc config set-context --current --namespace apps'
                 sh 'oc apply -f k8s/nginx/k8s'
+                sh 'oc delete pod -l app=nginx'
             }
         }
     }
