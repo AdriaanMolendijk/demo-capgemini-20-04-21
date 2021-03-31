@@ -1,12 +1,12 @@
 # Add repository to helm repo
-helm repo add bitnami-labs https://github.com/bitnami-labs/sealed-secrets
+helm repo add bitnami-labs https://bitnami-labs.github.io/sealed-secrets
 
 # Install helm chart
 helm install <controller-name> bitnami-labs/sealed-secrets --version <version>
 
 # Fetch public key
 kubeseal --fetch-cert \
-    --controller-name=<controller-name> \
+    --controller-name=sealed-secrets-controller \
     --controller-namespace=kube-system \
     > pub-cert.pem
 
