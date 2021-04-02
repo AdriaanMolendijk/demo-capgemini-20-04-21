@@ -13,6 +13,9 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
+        {{- if eq .Values.web.ingress.serviceMesh.enabled false }}
+        sidecar.istio.io/inject: 'true'
+        {{- end }}
       {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
