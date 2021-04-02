@@ -1,15 +1,21 @@
-FROM node:10.15-jessie
+FROM node:10.15-jessie as builder
 
-WORKDIR /usr/src/app
+WORKDIR /build
 
 COPY package*.json ./
 RUN npm i
 
-COPY ./dist/fe-app /usr/src/app/www
-COPY ./server.js /usr/src/app/server.js
+COPY ./ ./
+RUN npm run build
 
-HEALTHCHECK --interval=30s --timeout=3s \
-  CMD curl -f http://localhost:8080/health || exit 1
+FROM node:10.15-jessie
+
+WORKDIR /usr/src/app
+
+COPY --from=builder build/package*.json ./
+COPY --from=builder build/node_modules /usr/src/app
+COPY --from=builder build/dist/fe-app /usr/src/app/www
+COPY --from=builder build/server.js /usr/src/app/server.js
 
 EXPOSE 8080
 

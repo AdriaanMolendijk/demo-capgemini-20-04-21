@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ExampleControllerService} from '../core/api/services/example-controller.service';
+import {ExampleControllerService} from '../core/api/services/example-controller.service';
 import {Observable} from 'rxjs';
-import {ExampleResponse} from '../core/api/models/example-response';
+import {ExampleResponse} from '../core/api/models/example-response';
 
 @Component({
   selector: 'app-main-page',
