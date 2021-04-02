@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy image to cluster') {
             steps {
                 sh 'oc login -u bryan -p $OC_CREDS $OC_API_ADDR --insecure-skip-tls-verify'
-                sh 'oc config set-context --current --namespace apps'
+                sh 'oc config set-context --current --namespace apps-istio'
                 sh 'helm upgrade ${APP_NAME} k8s/apps/${APP_NAME}/k8s/${APP_NAME} --set image.tag=${BUILD_NUMBER} --set image.repository=${IMAGE_NAME} --install'
 
             }
