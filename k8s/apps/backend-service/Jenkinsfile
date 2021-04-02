@@ -14,7 +14,7 @@ pipeline {
         stage('Build image') {
             steps {
                 sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER}  -f k8s/apps/${APP_NAME}/src/main/docker/Dockerfile k8s/apps/${APP_NAME}'
-                sh 'docker ${IMAGE_NAME}:${BUILD_NUMBER}'
+                sh 'docker push ${IMAGE_NAME}:${BUILD_NUMBER}'
             }
         }
 
