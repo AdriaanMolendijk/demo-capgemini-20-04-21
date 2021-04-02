@@ -3,8 +3,9 @@ kind: Service
 metadata:
   name: {{ include "backend-service.fullname" . }}
   annotations:
-    boot.spring.io/actuator: http://:8080{{ .Values.basePath }}/actuator/refresh
+    boot.spring.io/actuator: http://:8080{{ .Values.basePath }}/actuator
   labels:
+    app: {{ include "backend-service.fullname" . }}
     {{- include "backend-service.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}

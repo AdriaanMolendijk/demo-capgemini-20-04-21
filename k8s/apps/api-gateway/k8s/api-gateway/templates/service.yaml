@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.web.name }}
+  annotations:
+    boot.spring.io/actuator: http://:8080/actuator
   labels:
     app: {{ .Values.web.name }}
     chart: {{ template "api-gateway.chart" . }}

@@ -2,3 +2,8 @@ gateway:
   webUrl: http://frontend-app:8080
   backendUrl: http://backend-service:8080
 trace-errors: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

@@ -10,3 +10,9 @@ trace-errors: true
 
 app:
   prefix: application-yaml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
