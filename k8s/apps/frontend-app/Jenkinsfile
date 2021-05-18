@@ -7,7 +7,7 @@ pipeline {
         OC_API_ADDR = credentials('openshift-cluster-api-address')
         OC_CREDS = credentials('oc-creds')
         APP_NAME = "frontend-app"
-        IMAGE_NAME = "docker.apps.adriaanmolendijk.info/${APP_NAME}"
+        IMAGE_NAME = "docker.apps.blierop.com/${APP_NAME}"
     }
 
     stages {

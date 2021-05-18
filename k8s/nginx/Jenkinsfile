@@ -1,8 +1,8 @@
 pipeline {
     agent {
-        label 'docker'    
+        label 'docker'
     }
-    
+
     environment {
         OC_API_ADDR = credentials('openshift-cluster-api-address')
         OC_CREDS = credentials('oc-creds')
@@ -11,8 +11,8 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                sh 'docker build -t docker.apps.adriaanmolendijk.info/nginx k8s/nginx'
-                sh 'docker push docker.apps.adriaanmolendijk.info/nginx'
+                sh 'docker build -t docker.apps.blierop.com/nginx k8s/nginx'
+                sh 'docker push docker.apps.blierop.com/nginx'
             }
         }
 

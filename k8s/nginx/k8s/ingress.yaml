@@ -4,7 +4,7 @@ metadata:
   name: nginx
 spec:
   rules:
-  - host: nginx.apps.adriaanmolendijk.info
+  - host: nginx.apps.blierop.com
     http:
       paths:
       - backend:
@@ -16,5 +16,5 @@ spec:
         pathType: Exact
   tls:
   - hosts:
-    - nginx.apps.adriaanmolendijk.info
+    - nginx.apps.blierop.com
     secretName: nginx-cert

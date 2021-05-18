@@ -3,7 +3,7 @@ replicaCount: 1
 web:
   name: frontend-app
   image:
-    repository: docker.apps.adriaanmolendijk.info/frontend-app
+    repository: docker.apps.blierop.com/frontend-app
     tag: latest
     pullPolicy: IfNotPresent
 service:

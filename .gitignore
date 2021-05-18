@@ -4,3 +4,5 @@ pull-secret.txt
 .idea
 # Keys
 *.key
+
+node_modules

@@ -1,4 +1,4 @@
-k create -n openshift-config cm docker-cert --from-file=docker.apps.adriaanmolendijk.info=openshift.crt
+k create -n openshift-config cm docker-cert --from-file=docker.apps.blierop.com=openshift.crt
 
 oc edit image.config.openshift.io/cluster
 
@@ -7,6 +7,6 @@ oc edit image.config.openshift.io/cluster
 #     name: docker-cert
 
 oc create secret docker-registry docker-creds \
-    --docker-server=docker.apps.adriaanmolendijk.info \
+    --docker-server=docker.apps.blierop.com \
     --docker-username=<username>  \
     --docker-password=<password>

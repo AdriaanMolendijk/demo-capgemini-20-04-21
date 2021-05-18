@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t docker.apps.adriaanmolendijk.info/backend-service -f src/main/docker/Dockerfile .
+docker build -t docker.apps.blierop.com/backend-service -f src/main/docker/Dockerfile .

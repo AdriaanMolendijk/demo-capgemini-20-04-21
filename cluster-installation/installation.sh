@@ -12,7 +12,7 @@ az aro create \
   --vnet aro-vnet \
   --master-subnet master-subnet \
   --worker-subnet worker-subnet \
-  --domain adriaanmolendijk.info \
+  --domain blierop.com \
   --pull-secret @pull-secret.txt
 
 # List credentials cluster

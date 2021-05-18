@@ -3,13 +3,13 @@ replicaCount: 1
 web:
   name: api-gateway
   image:
-    repository: docker.apps.adriaanmolendijk.info/api-gateway
+    repository: docker.apps.blierop.com/api-gateway
     tag: latest
     pullPolicy: IfNotPresent
   enviroment: prod
   ingress:
     issuer: letsencrypt-prod
-    domain: example.apps.adriaanmolendijk.info
+    domain: example.apps.blierop.com
     secretName: cg-demo-com-tls
     path: /
     serviceMesh:

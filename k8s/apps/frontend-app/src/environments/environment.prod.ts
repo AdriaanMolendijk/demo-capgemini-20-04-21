@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendUri: 'http://example.apps.adriaanmolendijk.info'
+  backendUri: 'http://example.apps.blierop.com'
 };

@@ -20,7 +20,7 @@ spec:
         runAsUser: 0
       serviceAccountName: apps
       containers:
-      - image: docker.apps.adriaanmolendijk.info/nginx
+      - image: docker.apps.blierop.com/nginx
         name: nginx
         ports:
         - containerPort: 80

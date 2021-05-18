@@ -9,7 +9,7 @@ ARG JAR_FILE=target/*.jar
 RUN cp ${JAR_FILE} application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
-FROM adoptopenjdk:14-jre-hotspot
+FROM adoptopenjdk:15-jre-hotspot
 
 WORKDIR application
 COPY --from=builder dependencies/ ./
@@ -17,7 +17,7 @@ COPY --from=builder spring-boot-loader/ ./
 COPY --from=builder snapshot-dependencies/ ./
 
 ENV JAVA_OPTS=""
-ENV SPRING_OPTS="--spring.profiles.active=prod"
+ENV SPRING_OPTS=""
 ENV MEM_OPTS=""
 
 EXPOSE 8080
