@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: nexus
+  name: nexus
+spec:
+  host: {{ .Values.web.route.domain }}
+  port:
+    targetPort: 8081
+  to:
+    kind: ""
+    name: nexus
+  tls:
+    insecureEdgeTerminationPolicy: None
+    termination: edge

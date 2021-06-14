@@ -1,0 +1,3 @@
+web:
+  route:
+    domain: jenkins.apps.openshift.blierop.com

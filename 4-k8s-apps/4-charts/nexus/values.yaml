@@ -1,0 +1,4 @@
+web:
+  route:
+    domain: nexus.apps.openshift.blierop.com
+    docker: docker.apps.openshift.blierop.com
