@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} k8s/apps/${APP_NAME}'
+                sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} 4-k8s-apps/5-apps/${APP_NAME}'
                 sh 'docker push ${IMAGE_NAME}:${BUILD_NUMBER}'
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh 'oc login -u bryan -p $OC_CREDS $OC_API_ADDR --insecure-skip-tls-verify'
                 sh 'oc config set-context --current --namespace apps-istio'
-                sh 'helm upgrade ${APP_NAME} k8s/apps/${APP_NAME}/k8s/${APP_NAME} --set web.image.tag=${BUILD_NUMBER} --set image.repository=${IMAGE_NAME} --install'
+                sh 'helm upgrade ${APP_NAME} 4-k8s-apps/5-apps/${APP_NAME}/k8s/${APP_NAME} --set web.image.tag=${BUILD_NUMBER} --set image.repository=${IMAGE_NAME} --install'
 
             }
         }
