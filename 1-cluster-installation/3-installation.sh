@@ -1,10 +1,10 @@
  #!/bin/bash
 
 # Set up environment variables
-#export LOCATION=westeurope
-#export RESOURCEGROUP=myrg-0615
-#export CLUSTER=mycluster-0615
-#export DOMAIN=openshift.blierop.com
+#LOCATION=westeurope
+#RESOURCEGROUP=myrg-0615-demo
+#CLUSTER=mycluster-0615-demo
+#DOMAIN=demo.blierop.com
 
 # Create the cluster
 az aro create \
@@ -21,7 +21,7 @@ az aro create \
 # .apps - pointing to the ingress IP address
 #
 # You can use the following command to retreive these IP adresses
-az aro show -n mycluster-0615 -g myrg-0615 --query '{api:apiserverProfile.ip, ingress:ingressProfiles[0].ip}'
+az aro show -n $CLUSTER -g $RESOURCEGROUP --query '{api:apiserverProfile.ip, ingress:ingressProfiles[0].ip}'
 
 # List credentials cluster
 az aro list-credentials \

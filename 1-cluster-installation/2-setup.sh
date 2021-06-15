@@ -2,7 +2,7 @@
 
 # Set up environment variables
 #LOCATION=westeurope
-#RESOURCEGROUP=myrg-0615
+#RESOURCEGROUP=myrg-0615-demo
 #CLUSTER=mycluster-0615
 
 # Create the resource group

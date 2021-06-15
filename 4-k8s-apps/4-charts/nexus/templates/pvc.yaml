@@ -9,3 +9,4 @@ spec:
     requests:
       storage: 10Gi 
   volumeName: nexus
+  storageClassName: azure-static
