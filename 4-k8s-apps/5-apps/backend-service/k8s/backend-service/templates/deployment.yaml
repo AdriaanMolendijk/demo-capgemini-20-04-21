@@ -11,11 +11,8 @@ spec:
   {{- include "backend-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
         sidecar.istio.io/inject: 'true'
-      {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
     {{- include "backend-service.selectorLabels" . | nindent 8 }}
     spec:
