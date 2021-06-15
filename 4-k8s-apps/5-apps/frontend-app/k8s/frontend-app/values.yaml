@@ -3,7 +3,7 @@ replicaCount: 1
 web:
   name: frontend-app
   image:
-    repository: docker.apps.openshift-1.blierop.com/frontend-app
+    repository: docker.apps.openshift.blierop.com/frontend-app
     tag: latest
     pullPolicy: IfNotPresent
 service:

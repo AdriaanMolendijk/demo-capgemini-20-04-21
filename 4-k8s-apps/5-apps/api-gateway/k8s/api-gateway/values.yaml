@@ -3,13 +3,13 @@ replicaCount: 1
 web:
   name: api-gateway
   image:
-    repository: docker.apps.openshift-1.blierop.com/api-gateway
+    repository: docker.apps.openshift.blierop.com/api-gateway
     tag: latest
     pullPolicy: IfNotPresent
   enviroment: prod
   ingress:
     issuer: letsencrypt-prod
-    domain: example.apps.openshift-1.blierop.com
+    domain: example.apps.openshift.blierop.com
     secretName: cg-demo-com-tls
     path: /
     serviceMesh:
